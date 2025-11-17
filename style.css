@@ -1,0 +1,253 @@
+@font-face {
+    font-family: 'Dosis Regular';
+    src: url('fonts/Dosis-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Dosis Medium';
+    src: url('fonts/Dosis-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NT Wagner';
+    src: url('fonts/NT Wagner.otf') format('opentype');
+}
+
+body {
+    font-family: 'Dosis Regular', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 80px; /* hauteur du header */
+    background-color:   #aedaac    ;   /* couleur de fond */
+    color: #333;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #637832;
+    color: white;
+    padding: 0rem;     /* height: auto;*/                                     /*   hauteur du header   */ 
+    text-align: center;
+        font-family: 'Dosis Regular', Arial, sans-serif;      /*font-family: 'Dosis Medium', Arial, sans-serif;*/
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    
+}
+
+
+nav a {
+    color: #ffffff;
+    margin: 0 1rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ffffff;
+    color: #637832;
+}
+
+nav a.active {
+    background-color: #ffffff;
+    color: #637832;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.logo img {
+  height: 150px;
+  width: auto;
+  display: block;
+}
+
+.logo {
+ /* background: #fff;  temporaire pour tester */
+/*  padding: 0.5rem;*/
+}
+
+.site-title {
+  font-family: 'NT Wagner', sans-serif;
+  font-size: 1.8rem;
+  color: white;
+}
+
+main {
+    padding: 2rem;
+    font-family: 'Dosis Regular', Arial, sans-serif;
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('images/fond_index.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* ✅ cette ligne fixe l'image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /*padding: 3rem 1rem;*/
+    padding-top: 6rem; /* pour ne pas passer sous le header */
+    padding-bottom: 6rem; /* pour ne pas toucher le footer */
+}
+
+.hero img, main img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.hero-overlay {
+    background: rgba(255, 255, 255, 0.9); /* fond blanc légèrement transparent (tu peux mettre 1 pour opaque) */
+    padding: 2.5rem 3rem; /* ✅ marges internes plus larges */
+    animation: slideIn 1.5s ease-out;
+    border-radius: 1rem;
+    max-width: 1200px; /* ✅ limite la largeur */
+    width: 100%;
+    margin: 0 auto; /* ✅ centre le bloc */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    height: auto;
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #333; /* texte foncé pour contraster sur blanc */
+    font-family: 'Dosis Medium', Arial, sans-serif;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #555;
+    font-family: 'Dosis Regular', Arial, sans-serif;
+}
+
+
+.hero2 {             /* hero2 pour tarifs.html */
+    position: relative;
+    min-height: 80vh;
+    background-image: url('images/logo_horizontal_vert.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* ✅ cette ligne fixe l'image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+.hero2 img, main img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.hero2-overlay {
+    background: rgba(255, 255, 255, 0.9); /* fond blanc légèrement transparent (tu peux mettre 1 pour opaque) */
+    padding: 2.5rem 3rem; /* ✅ marges internes plus larges */
+    animation: slideIn 1.5s ease-out;
+    border-radius: 1rem;
+    max-width: 1200px; /* ✅ limite la largeur */
+    width: 100%;
+    margin: 0 auto; /* ✅ centre le bloc */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    height: auto;
+}
+
+.hero2 h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #333; /* texte foncé pour contraster sur blanc */
+    font-family: 'Dosis Medium', Arial, sans-serif;
+}
+
+.hero2 p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #555;
+    font-family: 'Dosis Regular', Arial, sans-serif;
+}
+
+
+
+
+
+.classique_font p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #555;
+    font-family: 'Dosis Regular', Arial, sans-serif;
+
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+button {
+    background-color: #637832;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'NT Wagner', Arial, sans-serif;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #637832;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+width: 100%;
+}
+
+.fixed-contact-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #637832;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    font-family: 'Dosis Medium', Arial, sans-serif;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.fixed-contact-button:hover {
+    background-color: #637832;
+}
+
+
