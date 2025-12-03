@@ -57,18 +57,40 @@ nav a.active {
     color: #637832;
 }
 
-.header-container {
+/*.header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
 }
+*/
+
+/* Force le header à garder tout à l’intérieur de l’écran */
+.header-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 
 .logo {
  /* background: #fff;  temporaire pour tester */
 /*  padding: 0.5rem;*/
 }
+
+.logo {
+    max-width: 50%;
+}
+
+
+
+
+
+
+
+
 
 .site-title {
   font-family: 'NT Wagner', sans-serif;
@@ -259,8 +281,17 @@ width: 100%;
   gap: 1rem;
 }
 
-.logo img { height: 48px; display: block; }
-.site-title { margin-left: 0.5rem; font-family: 'Dosis Medium', Arial, sans-serif; font-size: 1.2rem; color: white; }
+/*.logo img { height: 48px; display: block; }*/
+
+.logo img {
+    height: 44px !important;
+    width: auto;
+}
+
+
+
+.site-title { margin-left: 0.5rem; font-family: 'Dosis Medium', Arial, sans-serif; font-size: 1.4rem; color: white;white-space: nowrap; }
+
 
 .burger {
   display: none;
@@ -272,7 +303,10 @@ width: 100%;
   cursor: pointer;
   background: rgba(255,255,255,0.08);
   border: none;
+  margin-left: auto;
 }
+
+
 
 .burger .bar {
   width: 22px;
