@@ -5,7 +5,6 @@ Bienvenue sur le site vitrine de Eclore - Sophrologie Caycédienne.
 ## Contenu du projet
 
 - `index.html` : Page d'accueil
-- `about.html` : À propos
 - `contact.html` : Page de contact
 - `style.css` : Feuille de style
 - `script.js` : Fichier JavaScript (vide pour l'instant)

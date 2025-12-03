@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>La sophrologie Caycédienne - Eclore</title>
+    <title>Eclore - Sophrologie Caycédienne</title>
     <!-- Meta Description SEO -->
     <meta name="description" content="Séances de sophrologie à Pau (64000). Relaxation, gestion du stress, mieux-être. Découvrez les accompagnements proposés par Eclore.">
     <!-- Mobile responsive -->
@@ -10,20 +10,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-	<div class="header-container">
-    	<div class="logo">
-      		<img src="images/logo_carre_blanc.png" alt="Logo Eclore" />
-    	</div>
-        	<h1>Eclore - Sophrologie Caycédienne <BR> Artigueloutan (64 420) </h1>
-        	<nav>
-            	<a href="index.html" >Accueil</a>
-            	<a href="sophrologie.html" class="active">La Sophrologie</a>
-            	<a href="tarifs.html">Tarifs</a>
-            	<a href="contact.html">Contact</a>
-        	</nav>
- 	</div>
-    </header>
+    
+  <header>
+    <div class="header-container">
+      <div style="display:flex; align-items:center; gap:0.75rem;">
+        <div class="logo"><img src="images/logo_carre_blanc.png" alt="Eclore logo"></div>
+        <div class="site-title">Eclore</div>
+      </div>
+      <nav class="desktop-nav">
+        <a href="index.html" class="">Accueil</a>
+        <a href="sophrologie.html" class="active">Sophrologie</a>
+        <a href="tarifs.html" class="">Tarifs</a>
+        <a href="contact.html" class="">Contact</a>
+      </nav>
+      <button class="burger" aria-label="Ouvrir le menu">
+        <span class="bar"></span>
+      </button>
+    </div>
+    <div class="mobile-nav" aria-hidden="true">
+      <a href="index.html" class="">Accueil</a>
+      <a href="sophrologie.html" class="active">Sophrologie</a>
+      <a href="tarifs.html" class="">Tarifs</a>
+      <a href="contact.html" class="">Contact</a>
+    </div>
+  </header>
+
 
     <main class="hero">
         <div class="hero-overlay">
@@ -57,5 +68,6 @@ La sophrologie est une discipline et une méthode d’entraînement pour le dév
         <p>&copy; 2025 Eclore - Tous droits réservés</p>
     </footer>
 <a href="contact.html" class="fixed-contact-button">Contact</a>    <!-- bouton flottant sticky en bas. -->
+  <script src="script.js"></script>
 </body>
 </html>
