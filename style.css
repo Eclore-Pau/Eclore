@@ -64,11 +64,6 @@ nav a.active {
   max-width: 1200px;
   margin: 0 auto;
 }
-.logo img {
-  height: 150px;
-  width: auto;
-  display: block;
-}
 
 .logo {
  /* background: #fff;  temporaire pour tester */
