@@ -1,3 +1,11 @@
+div:target {
+    padding-top: 9em; 		*/ pour utiliser les ancres et qu'elles soient au bon endroit*/
+    margin-top: -9em; 
+}
+
+h2 { color: #637832; }
+
+
 @font-face {
     font-family: 'Dosis Regular';
     src: url('fonts/Dosis-Regular.ttf') format('truetype');
@@ -19,7 +27,7 @@ body {
     padding: 0;
     padding-top: 80px; /* hauteur du header */
     background-color:   #aedaac    ;   /* couleur de fond */
-    color: #333;
+    color: #637832;
 }
 
 header {
@@ -57,40 +65,23 @@ nav a.active {
     color: #637832;
 }
 
-/*.header-container {
+.header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
 }
-*/
-
-/* Force le header à garder tout à l’intérieur de l’écran */
-.header-container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    width: 100%;
-    box-sizing: border-box;
+.logo img {
+  height: 150px;
+  width: auto;
+  display: block;
 }
-
 
 .logo {
  /* background: #fff;  temporaire pour tester */
 /*  padding: 0.5rem;*/
 }
-
-.logo {
-    max-width: 50%;
-}
-
-
-
-
-
-
-
-
 
 .site-title {
   font-family: 'NT Wagner', sans-serif;
@@ -118,6 +109,7 @@ main {
     /*padding: 3rem 1rem;*/
     padding-top: 6rem; /* pour ne pas passer sous le header */
     padding-bottom: 6rem; /* pour ne pas toucher le footer */
+    color: #637832;
 }
 
 .hero img, main img {
@@ -155,9 +147,10 @@ main {
 .hero p {
     font-size: 1.5rem;
     margin-top: 1rem;
-    color: #555;
+    color: #637832;    /* 555*/
     font-family: 'Dosis Regular', Arial, sans-serif;
 }
+
 
 
 .hero2 {             /* hero2 pour tarifs.html */
@@ -268,121 +261,3 @@ width: 100%;
 }
 
 
-
-
-
-/* ========== Burger menu styles ========== */
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 1rem;
-}
-
-/*.logo img { height: 48px; display: block; }*/
-
-.logo img {
-    height: 44px !important;
-    width: auto;
-}
-
-
-
-.site-title { margin-left: 0.5rem; font-family: 'Dosis Medium', Arial, sans-serif; font-size: 1.4rem; color: white;white-space: nowrap; }
-
-
-.burger {
-  display: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 6px;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  background: rgba(255,255,255,0.08);
-  border: none;
-  margin-left: auto;
-}
-
-
-
-.burger .bar {
-  width: 22px;
-  height: 2px;
-  background: white;
-  display: block;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.burger .bar::before,
-.burger .bar::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 22px;
-  height: 2px;
-  background: white;
-  transition: all 0.3s ease;
-}
-
-.burger .bar::before { top: -7px; }
-.burger .bar::after { top: 7px; }
-
-/* When active */
-.burger.active .bar { background: transparent; }
-.burger.active .bar::before { transform: translateY(7px) rotate(45deg); top: 0; }
-.burger.active .bar::after { transform: translateY(-7px) rotate(-45deg); top: 0; }
-
-/* Mobile nav panel */
-.mobile-nav {
-  display: none;
-  position: fixed;
-  top: 64px; /* below header */
-  right: 0;
-  left: 0;
-  background: rgba(255,255,255,0.98);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-  z-index: 1500;
-  padding: 1rem 1rem 2rem 1rem;
-}
-
-.mobile-nav a {
-  display: block;
-  padding: 0.8rem 1rem;
-  margin: 0.2rem 0;
-  border-radius: 8px;
-  color: #637832;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-/* Active/hover state */
-.mobile-nav a:hover, .mobile-nav a.active { background: #e9f5e9; color: #637832; }
-
-/* Desktop nav adjustments */
-nav.desktop-nav { display: flex; gap: 0.5rem; align-items: center; }
-
-/* Responsive behavior */
-@media (max-width: 900px) {
-  .burger { display: flex; }
-  nav.desktop-nav { display: none; }
-  .mobile-nav { display: none; } /* toggled with JS */
-  header { padding: 0.5rem 1rem; }
-  .site-title { font-size: 1rem; }
-  .logo img { height: 44px; }
-  .hero { padding-top: 6.2rem; } /* keep space for fixed header */
-  .hero-overlay { width: 92%; padding: 2rem 1.25rem; max-width: 700px; }
-}
-
-/* Small phones */
-@media (max-width: 420px) {
-  .hero-overlay { padding: 1.25rem; }
-  .burger { width: 36px; height: 36px; }
-  .burger .bar, .burger .bar::before, .burger .bar::after { width: 18px; }
-}
-
-/* Ensure footer is block under content */
-footer { clear: both; display: block; position: relative; }
