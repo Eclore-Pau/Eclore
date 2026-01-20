@@ -227,10 +227,17 @@ footer {
     }
 
     .hero {
-        background-attachment: scroll;
+        background-attachment: scroll; /* Sur iOS Safari, fixed ne fonctionne pas bien */
         padding-top: 2rem;
         padding-bottom: 2rem;
         min-height: auto;
+    }
+    
+    /* Pour les appareils Android et autres navigateurs mobiles qui supportent fixed */
+    @supports (-webkit-overflow-scrolling: touch) {
+        .hero {
+            background-attachment: scroll;
+        }
     }
 
     .hero-overlay {
@@ -252,6 +259,7 @@ footer {
         right: 15px;
         padding: 12px 20px;
         font-size: 0.9rem;
+        z-index: 1001; /* Plus élevé que le header (1000) */
     }
 }
 
@@ -294,6 +302,7 @@ footer {
         right: 10px;
         padding: 10px 18px;
         font-size: 0.85rem;
+        z-index: 1001; /* Plus élevé que le header (1000) */
     }
 
     footer {
