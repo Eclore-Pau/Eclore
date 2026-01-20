@@ -10,10 +10,13 @@
     <header>
 	<div class="header-container">
     	<div class="logo">
-      		<img src="images/logo_carre_blanc.png" alt="Logo Eclore" />
+      		<img src="images/logo_blanc.svg" alt="Logo Eclore" />
     	</div>
         	<h1>Eclore - Sophrologie Caycédienne <BR> Artigueloutan (64 420) </h1>
-        	<nav>
+        	 <!-- Bouton hamburger pour mobile -->
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            
+            <nav id="mainNav">
             	<a href="index.html" >Accueil</a>
             	<a href="sophrologie.html" class="active">Sophrologie</a>
             	<a href="seance.html">Séance</a>
@@ -48,6 +51,22 @@
 		<p>&copy; 2025 Eclore - Tous droits réservés</p>
     </footer>
 <!-- <a href="info.html" class="fixed-contact-button">Contact</a>    <!-- bouton flottant sticky en bas. --> 
-<a href="tel:0677805217p123" class="fixed-contact-button">Appeler</a>    <!-- bouton flottant sticky en bas. -->
-</body>
+<a href="tel:0677805217" class="fixed-contact-button">Appeler</a>    <!-- bouton flottant sticky en bas. -->
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+        }
+
+        // Fermer le menu si on clique en dehors
+        document.addEventListener('click', function(event) {
+            const nav = document.getElementById('mainNav');
+            const menuToggle = document.querySelector('.menu-toggle');
+            
+            if (!nav.contains(event.target) && !menuToggle.contains(event.target)) {
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+	</body>
 </html>
