@@ -186,7 +186,11 @@ footer {
 /* Tablettes et petits écrans (max 768px) */
 @media (max-width: 768px) {
     body {
-        padding-top: 60px;
+        padding-top: 200px; /* Augmenté pour laisser de la place au header */
+    }
+
+    header {
+        height: auto; /* Hauteur flexible selon le contenu */
     }
 
     .header-container {
@@ -254,7 +258,7 @@ footer {
 /* Smartphones (max 480px) */
 @media (max-width: 480px) {
     body {
-        padding-top: 50px;
+        padding-top: 180px; /* Augmenté pour laisser de la place au header */
     }
 
     .logo img {
