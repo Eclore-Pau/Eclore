@@ -209,9 +209,9 @@ footer {
         height: 50px;
     }
 
-    header h1 {
+    /*header h1 {
         display: none; /* Masquer le titre sur mobile pour gagner de la place */
-    }
+    /*}*/
 
     /* Bouton hamburger */
     .menu-toggle {
