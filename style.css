@@ -17,8 +17,8 @@ body {
     font-family: 'Dosis Regular', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    padding-top: 80px; /* hauteur du header */
-    background-color:   #aedaac    ;   /* couleur de fond */
+    padding-top: 80px;
+    background-color: #aedaac;
     color: #333;
 }
 
@@ -29,13 +29,13 @@ header {
     width: 100%;
     background-color: #637832;
     color: white;
-    padding: 0rem;     /* height: auto;*/                                     /*   hauteur du header   */ 
+    padding: 0;
     text-align: center;
-    font-family: 'Dosis Regular', Arial, sans-serif;      /*font-family: 'Dosis Medium', Arial, sans-serif;*/
+    font-family: 'Dosis Regular', Arial, sans-serif;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    
 }
+
 main {
     padding: 2rem;
     font-family: 'Dosis Regular', Arial, sans-serif;
@@ -61,22 +61,24 @@ nav a.active {
 }
 
 .header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
+
 .logo img {
-  height: 150px;
-  width: auto;
-  display: block;
+    height: 150px;
+    width: auto;
+    display: block;
 }
 
 .site-title {
-  font-family: 'NT Wagner', sans-serif;
-  font-size: 1.8rem;
-  color: white;
+    font-family: 'NT Wagner', sans-serif;
+    font-size: 1.8rem;
+    color: white;
 }
 
 .hero {
@@ -86,14 +88,13 @@ nav a.active {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* ✅ cette ligne fixe l'image */
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    /*padding: 3rem 1rem;*/
-    padding-top: 6rem; /* pour ne pas passer sous le header */
-    padding-bottom: 6rem; /* pour ne pas toucher le footer */
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }
 
 .hero img, main img {
@@ -105,18 +106,18 @@ nav a.active {
 }
 
 .hero-overlay {
-    background: rgba(255, 255, 255, 0.9); /* fond blanc légèrement transparent (tu peux mettre 1 pour opaque) */
-    padding: 2.5rem 3rem; /* ✅ marges internes plus larges */
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2.5rem 3rem;
     animation: slideIn 1.5s ease-out;
     border-radius: 1rem;
-    max-width: 1200px; /* ✅ limite la largeur */
+    max-width: 1200px;
     width: 100%;
-    margin: 0 auto; /* ✅ centre le bloc */
+    margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     height: auto;
-	color: #637832;   									/* couleur du texte  */
-	font-family: 'Dosis Medium', Arial, sans-serif;  	/* type du texte */
-	font-size: 1.5rem;  								/* taille du texte */
+    color: #637832;
+    font-family: 'Dosis Medium', Arial, sans-serif;
+    font-size: 1.5rem;
 }
 
 @keyframes slideIn {
@@ -127,10 +128,9 @@ nav a.active {
 .hero h1 {
     font-size: 3rem;
     margin: 0;
-    color: #333; /* texte foncé pour contraster sur blanc */
+    color: #333;
     font-family: 'Dosis Medium', Arial, sans-serif;
 }
-
 
 form input, form textarea {
     width: 100%;
@@ -157,7 +157,7 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
-width: 100%;
+    width: 100%;
 }
 
 .fixed-contact-button {
@@ -179,4 +179,121 @@ width: 100%;
     background-color: #637832;
 }
 
+/* ============================================
+   MEDIA QUERIES POUR MOBILE
+   ============================================ */
 
+/* Tablettes et petits écrans (max 768px) */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+        line-height: 1.3;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        padding: 0.5rem 0;
+    }
+
+    nav a {
+        margin: 0.3rem 0.5rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .hero {
+        background-attachment: scroll;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        min-height: auto;
+    }
+
+    .hero-overlay {
+        padding: 1.5rem;
+        font-size: 1.1rem;
+        margin: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .fixed-contact-button {
+        bottom: 15px;
+        right: 15px;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Smartphones (max 480px) */
+@media (max-width: 480px) {
+    body {
+        padding-top: 50px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    header h1 {
+        font-size: 1rem;
+    }
+
+    nav a {
+        margin: 0.2rem 0.3rem;
+        padding: 0.3rem 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    .hero-overlay {
+        padding: 1rem;
+        font-size: 1rem;
+        margin: 0.5rem;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+
+    .fixed-contact-button {
+        bottom: 10px;
+        right: 10px;
+        padding: 10px 18px;
+        font-size: 0.85rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+}
