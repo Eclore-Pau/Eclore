@@ -184,7 +184,7 @@ footer {
     background-color: #637832;
 }
 
-	.fixed-contact-button {			/* supprimer le bouton tel pour l'ordinateur */
+.fixed-contact-button {			/* supprimer le bouton tel pour l'ordinateur */
 	display: none;
 	}
 
@@ -302,7 +302,9 @@ footer {
         font-size: 0.9rem;
         z-index: 1001;
     }
-
+	.fixed-contact-button:hover {    /* dernier ajout*/
+    background-color: #637832;
+	}
 }
 
 /* Smartphones (max 480px) */
@@ -349,7 +351,11 @@ footer {
         font-size: 0.85rem;
         z-index: 1001;
     }
-
+	
+	.fixed-contact-button:hover {    /* dernier ajout*/
+    background-color: #637832;
+	}
+	
     footer {
         font-size: 0.9rem;
         padding: 0.8rem;
