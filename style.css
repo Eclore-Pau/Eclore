@@ -164,7 +164,7 @@ footer {
     padding: 1rem;
     width: 100%;
 }
-/*
+
 .fixed-contact-button {
     position: fixed;
     bottom: 20px;
@@ -183,7 +183,7 @@ footer {
 .fixed-contact-button:hover {
     background-color: #637832;
 }
-*/
+
 	.fixed-contact-button {			/* supprimer le bouton tel pour l'ordinateur */
 	display: none;
 	}
@@ -212,9 +212,12 @@ footer {
     .logo img {
         height: 50px;
     }
-
+/*
     header h1 {
-        /*display: none; /* Masquer le titre sur mobile pour gagner de la place */
+        display: none; /* Masquer le titre sur mobile pour gagner de la place
+    }
+*/
+    h1 {
 		font-size: 1.1rem;
     }
 
@@ -352,8 +355,12 @@ footer {
         padding: 0.8rem;
     }
 	
-	header h1 {
-        /*display: none; /* Masquer le titre sur mobile pour gagner de la place */
+/*
+    header h1 {
+        display: none; /* Masquer le titre sur mobile pour gagner de la place
+    }
+*/
+    h1 {
 		font-size: 1.1rem;
     }
 }
